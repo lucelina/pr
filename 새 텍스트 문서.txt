@@ -1,0 +1,588 @@
+@charset "UTF-8";
+@import url(http://geniusmj87.dothome.co.kr/common/css/reset.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700|Roboto);
+
+body {
+  font-family: 'Noto Sans KR', 'Montserrat', 'Roboto', sans-serif;
+  color: #333;
+  min-width: 320px;
+}
+ img {
+   max-width: 100%;
+ }
+
+.loader-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 9999;
+}
+#loaderImage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ /* ===== header 영역 ===== */
+ #header {
+   width: 100%;
+   height: 60px;
+   line-height: 60px;
+   padding: 0 20px;
+   background-color: #000;
+   z-index: 100;
+   position: fixed;
+   top: 0;
+   left: 0;
+ }
+
+ #header > h1 {
+   float: left;
+ }
+
+ #header > h1 > a {
+   display: block;
+   width: 100%;
+ }
+
+#header .gnb {
+  float: right;
+}
+
+.gnb > ul > li {
+  float: left;
+}
+
+.gnb > ul > li > a {
+  display: block;
+  margin: 0 0.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+.gnb > ul > li > a:hover, .gnb .on {
+  color: #fec810;
+}
+
+.open_menu, .close_menu {
+  display: none;
+}
+
+/* ===== main video 영역 ===== */
+#content {
+  width: 100%;
+}
+
+#intro {
+  overflow: hidden;
+  position: relative;
+}
+
+.video_box {
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+#video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.video_txt_box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorStr=#80000000, endColorStr=#80000000 );
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorStr=#80000000, endColorStr=#80000000 )";
+  zoom: 1; */
+}
+
+.video_txt_inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 20%;
+  margin: auto;
+  font-family:'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.scroll_box {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.scroll_box p {
+  margin-top: 15px;
+  color: #fff;
+}
+
+/* ===== profile 영역 ===== */
+#profile {
+  width: 100%;
+  padding: 5%;
+}
+
+#profile > h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family:'Montserrat', sans-serif;
+  margin-bottom: 5%;
+}
+
+.skill{
+  margin-bottom: 5%;
+}
+
+.skill > li {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+.skill > li > img {
+  padding: 10px;
+}
+
+.profile_txt_box {
+  background-color: #efefef;
+  padding: 2%;
+  position: relative;
+}
+
+.profile_txt_box .txt_box_left {
+  width: 35%;
+  float: left;
+}
+
+.txt_box_left::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 35%;
+  border-left: 1px solid #000;
+}
+
+.profile_txt_box .txt_box_right {
+  width: 65%;
+  float: right;
+  padding-left: 2%;
+}
+
+.txt_box_right .html_css {
+  width: 50%;
+  float: left;
+}
+
+.txt_box_right .js_jquery {
+  width: 50%;
+  float: right;
+}
+
+.txt_box_right h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* ===== protfolio 영역 ===== */
+#protfolio {
+  width: 100%;
+  padding: 5%;
+  padding-bottom: 0;
+  background-color: #efefef;
+}
+
+#protfolio > h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family:'Montserrat', sans-serif;
+  margin-bottom: 5%;
+}
+
+.pofol_box > li {
+  width: 50%;
+  float: left;
+}
+
+.pofol_box > li > a {
+  display: block;
+  width: 74.388%; /*851px*/
+  margin: 0 auto;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.pofol_box figure {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pofol_box figure img {
+  opacity: 0.8;
+}
+
+.pofol_box figure figcaption {
+  position: absolute;
+  top: 45%;
+  left: 7%;
+  right: 7%;
+  bottom: 45%;
+  border: 1px solid #fff;
+  border-width: 1px 1px 0;
+}
+
+.pofol_box figure .heading {
+  overflow: hidden;
+  transform: translateY(50%);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.pofol_box figure h2 {
+  display: table;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  width: auto;
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
+.pofol_box figure h2:before,
+.pofol_box figure h2:after {
+  position: absolute;
+  display: block;
+  width: 500%;
+  height: 1px;
+  content: '';
+  background: #fff;
+  top: 50%;
+}
+
+.pofol_box figure h2:before {
+  left: -500%
+}
+
+.pofol_box figure h2:after {
+  right: -500%;
+}
+
+.pofol_box .pofol_txt_box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 20px;
+  margin: 0;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.pofol_box > li > a:hover img,
+.pofol_box .pofol_hover img {
+  opacity: 0.25;
+  transform: scale(1.1);
+}
+
+.pofol_box > li > a:hover figcaption,
+.pofol_box .pofol_hover figcaption {
+  top: 10%;
+  bottom: 10%;
+}
+
+.pofol_box > li > a:hover .pofol_txt_box,
+.pofol_box .pofol_hover .pofol_txt_box {
+  opacity: 1;
+  transition-delay: 0.35s;
+}
+
+.pofol_box figure * {
+  transition: all 0.45s ease-in-out;
+}
+
+/* ===== contact 영역 ===== */
+#contact {
+  width: 100%;
+  padding: 5%;
+  background: url(../images/common/contact2.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+#contact > h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family:'Montserrat', sans-serif;
+  color: #fff;
+  margin-bottom: 5%;
+}
+
+.contact_left {
+  width: 50%;
+  float: left;
+}
+
+.contact_right {
+  width: 50%;
+  float: right;
+}
+
+.contact_left_inner, .contact_right_inner {
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.5);
+  padding: 7%;
+}
+
+.contact_left_inner h2, .contact_right_inner h2 {
+  font-size: 18px;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+.contact_left_inner p {
+  line-height: 1.7;
+  color: #fff;
+}
+
+.contact_left_inner .sns {
+  margin-top: 20px;
+}
+
+.contact_left_inner .sns a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+
+.contact_right_inner form {
+  text-align: center;
+}
+
+.contact_right_inner fieldset input, .contact_right_inner fieldset textarea{
+  display: block;
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.contact_right_inner .submit_btn {
+  padding: 1em 3em;
+  background-color: #fec810;
+  border: 1px solid #fec810;
+  border-radius: 5px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+/* ===== footer 영역 ===== */
+#footer {
+  width: 100%;
+  padding: 1%;
+  background-color: #efefef;
+}
+
+#footer p {
+  text-align: center;
+}
+
+/* ========== 미디어쿼리 ========== */
+/* 중단점
+pc: 1281px ~
+tablet(L): 801~1280px
+tablet(P): 480~800px
+moblie: ~480px */
+
+@media (max-width:1280px) {
+  /* profile 영역 */
+  .profile_txt_box .txt_box_left {
+    width: 48%;
+  }
+  .txt_box_left::after {
+    left: 48%;
+  }
+  .profile_txt_box .txt_box_right {
+    width: 52%;
+  }
+  /* protfolio 영역 */
+  .pofol_box > li > a {
+    width: 95%;
+    margin-bottom: 50px;
+  }
+  .pofol_box figure h2 {
+    font-size: 30px;
+  }
+  .pofol_box .pofol_txt_box {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 800px) {
+  /* header 영역 */
+  #header > h1 > a > img {
+    max-width: 90%;
+  }
+  .gnb > ul > li > a {
+    margin: 0 0.3em;
+    font-size: 16px;
+  }
+  /* intro 영역 */
+  .video_box {
+    padding-top: none;
+    height: 100%;
+    background: url(../images/main/intro_bg.jpg) center center no-repeat;
+    background-size: cover;
+  }
+  #video {
+    display: none;
+  }
+  /* profile 영역 */
+  .profile_txt_box {
+    background-color: #fff;
+    padding: 0;
+    text-align: center;
+  }
+  .profile_txt_box .txt_box_left {
+    width: 100%;
+    float: none;
+    background-color: #efefef;
+    margin-bottom: 20px;
+    padding: 2%;
+  }
+  .txt_box_left::after {
+    display: none;
+  }
+  .profile_txt_box .txt_box_right {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+    background-color: #efefef;
+    padding: 2%;
+  }
+  /* protfolio 영역 */
+  .pofol_box > li {
+    width: 100%;
+    float: none;
+  }
+  .pofol_box > li > a {
+    width: 100%;
+  }
+  .pofol_box figure h2 {
+    font-size: 35px;
+  }
+  .pofol_box .pofol_txt_box {
+    font-size: 20px;
+  }
+  /* contact 영역 */
+  .contact_left, .contact_right {
+    width: 100%;
+    float: none;
+  }
+  .contact_left {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* header 영역 */
+  #header {
+    padding: 0 10px;
+  }
+  #header > h1 {
+    width: 40px;
+  }
+  #header .tabgnb {
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    display: none;
+  }
+  #header .gnb {
+    float: none;
+    background-color: #000;
+  }
+  .gnb > ul > li {
+    float: none;
+  }
+  .gnb > ul > li > a {
+    font-size: 18px;
+    margin-left: 1em
+  }
+  .open_menu, .close_menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+  .close_menu {
+    display: none;
+  }
+  /* intro 영역 */
+  .video_txt_inner {
+    font-size: 50px;
+  }
+  #profile, #protfolio, #contact {
+    padding: 10% 5%;
+  }
+  .txt_box_left {
+    font-size: 14px;
+  }
+  .txt_box_right h3 {
+    font-size: 16px;
+  }
+  .txt_box_right li {
+    font-size: 14px;
+  }
+  .pofol_box figure h2 {
+    font-size: 28px;
+  }
+  .pofol_box .pofol_txt_box {
+    font-size: 15px;
+  }
+  .contact_left_inner h2, .contact_right_inner h2 {
+    font-size: 16px;
+  }
+  .contact_left_inner p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .contact_right_inner fieldset input, .contact_right_inner fieldset textarea{
+    padding: 0.5em;
+  }
+}
